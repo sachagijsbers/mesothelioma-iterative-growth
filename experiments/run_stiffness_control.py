@@ -6,7 +6,7 @@
 Downloads the CT if needed, runs both simulations, writes results/metrics_stiffness_control.csv
 and the three portfolio figures in figures/portfolio/.
 
-    python -m experiments.run_stiffness_control                    # full run, about 1.5 h
+    python -m experiments.run_stiffness_control                    # full run, about 45 min
     python -m experiments.run_stiffness_control --skip-simulation  # metrics + figures from existing results
 """
 

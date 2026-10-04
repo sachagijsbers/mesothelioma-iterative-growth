@@ -1,7 +1,7 @@
 """Optional comparison: thesis mechanics (re-implemented) vs the iterative model, same tumour and growth.
 
 Runs the thesis re-implementation (results/thesis_reimplementation, remeshed with GMSH every
-step, several hours) and compares it with results/ct_derived_stiffness from
+step, about 4 hours) and compares it with results/ct_derived_stiffness from
 run_stiffness_control. Writes results/metrics_thesis_comparison.csv and
 figures/results/thesis_vs_iterative.png.
 

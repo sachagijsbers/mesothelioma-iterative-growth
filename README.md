@@ -90,11 +90,11 @@ cd mesothelioma-iterative-growth
 pip install -e ".[test]"                         # Python >= 3.11
 
 python -m experiments.run_stiffness_control      # downloads the CT, runs A and B, writes metrics + figures
-python -m experiments.run_thesis_comparison      # optional: thesis mechanics, several hours
+python -m experiments.run_thesis_comparison      # optional: thesis mechanics, about 4 hours
 python -m pytest                                 # verification tests, ~20 s
 ```
 
-`run_stiffness_control` takes about 1.5 hours on a laptop. It writes `results/metrics_stiffness_control.csv` and the three figures in `figures/portfolio/`. With `--skip-simulation`, it recomputes metrics and figures from existing results in about a minute.
+`run_stiffness_control` takes about 45 minutes on a laptop (44 min measured). It writes `results/metrics_stiffness_control.csv` and the three figures in `figures/portfolio/`. With `--skip-simulation`, it recomputes metrics and figures from existing results in about a minute.
 
 ## Repository structure
 

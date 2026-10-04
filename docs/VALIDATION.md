@@ -13,6 +13,9 @@ The current public experiment demonstrates **model behaviour**. It is not a clin
 | Metric counts only added voxels | Holds on a constructed example | `tests/test_model_parts.py` |
 | Linear solver | CG with AMG reached the relative tolerance of 10⁻⁸ in all 14 solves (7 per run); the code raises an error otherwise | `iterative.solve_growth` |
 
+**Reproducibility.** The control experiment was re-run from scratch with the repository code (`python -m experiments.run_stiffness_control`, 44 min on a laptop, Python 3.13, Windows). Both runs reproduced the earlier outputs bit for bit: the level set φ is identical at all 7 steps of both runs, and so are the metrics (56.9% and 97.9%; 87,837 and 87,844 added voxels). The 53.0% of the thesis re-implementation comes from the existing run, recomputed from its saved level sets with the repository's metric code; that simulation (about 4 h) was not repeated.
+
+**Clean environment.** A fresh clone from GitHub in a new virtual environment installs with `pip install -e ".[test]"` and passes all tests. `python -m meso_growth.data` downloads CT files that are byte-identical to the ones used here, and builds the identical starting tumour. The full simulation was not repeated in that environment.
 
 **Not done:** mesh convergence (only 3 mm was run), sensitivity to the ROI size and boundary condition, and convergence in the number of growth steps.
 
